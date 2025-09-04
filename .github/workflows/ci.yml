@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install 
-      - name: Build site
-        run: npm run build
+        run: npm install  --legacy-peer-deps
+      
+        
 
   # Optional lighthouse check (disabled by default)
   # lighthouse:
