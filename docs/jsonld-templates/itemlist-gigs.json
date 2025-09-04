@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Marketplace Gigs",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "AI SEO Playbook — Fiverr",
+        "provider": { "@type": "Person", "name": "Chudi Nnorukam" },
+        "url": "{{fiverr_gig_url}}"
+      }
+    }
+  ]
+}

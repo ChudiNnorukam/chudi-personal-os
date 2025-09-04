@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{title}}",
+  "description": "{{summary}}",
+  "author": { "@type": "Person", "name": "Chudi Nnorukam" },
+  "datePublished": "{{date}}",
+  "image": "{{hero_img}}",
+  "mainEntityOfPage": "{{canonical_url}}"
+}

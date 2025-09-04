@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{playbook_title}}",
+  "step": "{{compressed_steps_or_link}}",
+  "totalTime": "{{duration_iso}}",
+  "tool": "{{tools_list}}",
+  "supply": "{{supplies_list}}"
+}

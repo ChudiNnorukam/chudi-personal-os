@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/Base.astro';
+import CTAButton from '../../components/CTAButton.astro';
+---
+<BaseLayout>
+  <h1 class="text-3xl font-bold mb-4">Marketplace Gigs</h1>
+  <p class="text-gray-700 mb-6">Prefer working through marketplaces? Hire me on Fiverr, Upwork, or LinkedIn Services. Each gig is designed for async collaboration.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <!-- Fiverr gig -->
+    <div class="p-4 border rounded-md shadow-sm bg-white">
+      <h2 class="text-xl font-semibold mb-2">AI SEO Playbook — Fiverr</h2>
+      <p class="text-gray-700 mb-2">Includes: strategy call, playbook setup, and follow-up Q&A.</p>
+      <CTAButton href="https://www.fiverr.com/share/" label="View on Fiverr" external={true} />
+    </div>
+    <!-- Upwork gig -->
+    <div class="p-4 border rounded-md shadow-sm bg-white">
+      <h2 class="text-xl font-semibold mb-2">Content Engine Audit — Upwork</h2>
+      <p class="text-gray-700 mb-2">Audit your current content engine and receive a 90-day roadmap.</p>
+      <CTAButton href="https://www.upwork.com/freelancers/" label="View on Upwork" external={true} />
+    </div>
+    <!-- LinkedIn Services gig -->
+    <div class="p-4 border rounded-md shadow-sm bg-white">
+      <h2 class="text-xl font-semibold mb-2">Micro-MVP Build — LinkedIn Services</h2>
+      <p class="text-gray-700 mb-2">Small, well-scoped builds delivered with a Loom demo.</p>
+      <CTAButton href="https://www.linkedin.com/in/chudi-nnorukam-b91203143/" label="View on LinkedIn" external={true} />
+    </div>
+  </div>
+  <p class="text-gray-700 mt-6">Or <a href="mailto:nnorukamchudi@gmail.com" class="text-blue-600 hover:underline">email me</a> directly to get started.</p>
+</BaseLayout>

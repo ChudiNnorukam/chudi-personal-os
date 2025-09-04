@@ -1,0 +1,165 @@
+{
+  "sites": [
+    {
+      "domain": "joshwcomeau.com",
+      "pages": [
+        "https://www.joshwcomeau.com/",
+        "https://www.joshwcomeau.com/blog/how-i-built-my-blog-v2/"
+      ],
+      "tech": {
+        "framework": "Next.js 15 (App Router) — explicit",
+        "styling": "Linaria (CSS-in-JS, compiled) — explicit",
+        "routing": "Next.js App Router",
+        "analytics": "Unknown (newsletter form present)",
+        "search": "Site navigation + categories; no native search observed on home",
+        "cms_or_static": "MDX v3 content in-repo; MongoDB used for some features"
+      },
+      "assets": {
+        "fonts": [
+          "Cartograph CF for code (post mention)"
+        ],
+        "cdn": []
+      },
+      "components": [
+        "Hero intro",
+        "Article grid/list",
+        "Category nav",
+        "Popular content block",
+        "Newsletter box",
+        "Footer with social"
+      ],
+      "seo": {
+        "title_pattern": "Post/page title • Josh W. Comeau",
+        "meta_pattern": "Custom summaries per post",
+        "internal_linking": "Strong cross-linking across categories and ‘popular’"
+      },
+      "jsonld": [
+        "Article (likely on posts)"
+      ],
+      "evidence": [
+        {
+          "clue": "Stack list (Next.js, React 19 beta, MDX v3, Linaria, Shiki, MongoDB, PartyKit)",
+          "source": "Blog post: How I Built My Blog — 2024 App Router Edition"
+        }
+      ]
+    },
+    {
+      "domain": "pjrvs.com",
+      "pages": [
+        "https://pjrvs.com/",
+        "https://usefathom.com/author/paul-jarvis"
+      ],
+      "tech": {
+        "framework": "Unknown (author page on Fathom domain)",
+        "styling": "Minimalist marketing site",
+        "routing": "Static",
+        "analytics": "Fathom (company context)",
+        "search": "None on author page",
+        "cms_or_static": "Static/marketing"
+      },
+      "assets": {
+        "fonts": [],
+        "cdn": []
+      },
+      "components": [
+        "Author bio",
+        "Post list"
+      ],
+      "seo": {
+        "title_pattern": "Author name • Fathom",
+        "meta_pattern": "Short author/brand description",
+        "internal_linking": "Links to help docs, blog posts"
+      },
+      "jsonld": [],
+      "evidence": [
+        {
+          "clue": "Author page hosted under usefathom.com",
+          "source": "Fathom Analytics author page for Paul Jarvis"
+        }
+      ]
+    },
+    {
+      "domain": "stephsmith.io",
+      "pages": [
+        "https://stephsmith.io/",
+        "https://blog.stephsmith.io/"
+      ],
+      "tech": {
+        "framework": "Homepage: static hub; Blog: Ghost",
+        "styling": "Custom CSS/static",
+        "routing": "Simple hub + external blog subdomain",
+        "analytics": "Cookie notice; provider not identified",
+        "search": "Blog search (Ghost)",
+        "cms_or_static": "Ghost for blog"
+      },
+      "assets": {
+        "fonts": [],
+        "cdn": []
+      },
+      "components": [
+        "Hero with badges",
+        "Project grid",
+        "Travel/gallery sections",
+        "External links"
+      ],
+      "seo": {
+        "title_pattern": "Steph | Smith",
+        "meta_pattern": "Remote work • growth • tech",
+        "internal_linking": "Hub links into Ghost blog and projects"
+      },
+      "jsonld": [
+        "Article (on Ghost blog)"
+      ],
+      "evidence": [
+        {
+          "clue": "Blog footer links to Ghost",
+          "source": "blog.stephsmith.io footer"
+        }
+      ]
+    },
+    {
+      "domain": "wesbos.com",
+      "pages": [
+        "https://wesbos.com/",
+        "https://github.com/wesbos/wesbos"
+      ],
+      "tech": {
+        "framework": "Waku (per package.json)",
+        "styling": "CSS Modules (seen in repo tooling)",
+        "routing": "Waku + file routes",
+        "analytics": "Custom Analytics.tsx present",
+        "search": "Not evident on home",
+        "cms_or_static": "MDX-heavy site (repo shows 84% MDX)"
+      },
+      "assets": {
+        "fonts": [],
+        "cdn": [
+          "Cloudflare (wrangler.toml present)"
+        ]
+      },
+      "components": [
+        "Hero + course cards",
+        "Podcast section",
+        "Tips grid",
+        "Blog index"
+      ],
+      "seo": {
+        "title_pattern": "Wes Bos — Courses/Blog",
+        "meta_pattern": "Short developer education",
+        "internal_linking": "Cross-links to courses and Syntax podcast"
+      },
+      "jsonld": [],
+      "evidence": [
+        {
+          "clue": "Repo shows waku dependency, wrangler.toml, high MDX ratio",
+          "source": "wesbos/wesbos repo and commit"
+        }
+      ]
+    }
+  ],
+  "cross_site_patterns": [
+    "Homepage hero → proof/logos → product/service cards → footer with simple CTAs",
+    "Minimal friction CTAs (newsletter or course/product buttons)",
+    "Evergreen content hubs with internal cross-linking"
+  ]
+}

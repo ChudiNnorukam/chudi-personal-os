@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "url": "{{service_url}}",
+  "price": "{{price_from}}",
+  "priceCurrency": "USD",
+  "eligibleRegion": "Worldwide",
+  "availability": "https://schema.org/InStock"
+}

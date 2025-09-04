@@ -1,0 +1,24 @@
+---
+/**
+ * CTAButton component
+ * Props:
+ * - href: string (link destination)
+ * - label: string (button label)
+ * - external: boolean (optional, open in new tab)
+ */
+export interface Props {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+const { href, label, external = false } = Astro.props as Props;
+---
+<a
+  href={href}
+  class="inline-block px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-sm"
+  {...(external
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {})}
+>
+  {label}
+</a>

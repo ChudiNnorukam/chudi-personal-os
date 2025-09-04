@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import CTAButton from '../components/CTAButton.astro';
+import services from '../../data/service.json' assert { type: 'json' };
+---
+<BaseLayout>
+  <h1 class="text-3xl font-bold mb-6">Services</h1>
+  <div class="space-y-8">
+    {services.map(service => (
+      <div class="p-6 border rounded-md shadow-sm bg-white">
+        <h2 class="text-2xl font-semibold mb-2">{service.name}</h2>
+        {service.outcome && <p class="mb-2 text-gray-700"><strong>Outcome:</strong> {service.outcome}</p>}
+        {service.deliverables && (
+          <div class="mb-2">
+            <strong>Deliverables:</strong>
+            <ul class="list-disc list-inside text-gray-700">
+              {service.deliverables.map(item => (<li>{item}</li>))}
+            </ul>
+          </div>
+        )}
+        {service.timeline && <p class="mb-2 text-gray-700"><strong>Timeline:</strong> {service.timeline}</p>}
+        {service.price_from && <p class="mb-4 text-gray-700"><strong>Price:</strong> {service.price_from}</p>}
+        <div class="flex space-x-3">
+          <CTAButton href={service.ctas.email} label="Email me" />
+          <CTAButton href={service.ctas.linkedin} label="DM me on LinkedIn" external={true} />
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

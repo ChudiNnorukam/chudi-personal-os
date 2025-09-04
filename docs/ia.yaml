@@ -1,0 +1,52 @@
+site:
+  name: "Chudi Nnorukam — Personal OS Portfolio"
+  routes:
+    - path: "/"
+      modules: [value-line, ctas, proof, featured, services-sampler, about-lite, footer]
+    - path: "/about"
+    - path: "/services"
+    - path: "/portfolio"
+    - path: "/products/ai-seo-kit"
+    - path: "/playbooks"
+    - path: "/playbooks/<slug>"
+    - path: "/tools"
+    - path: "/gigs"
+    - path: "/contact"
+    - path: "/sitemap"
+    - path: "/rss.xml"
+
+link_rules:
+  playbook:
+    - link: "/products/ai-seo-kit"
+      position: ["mid-article", "end"]
+    - link: "/services"
+      position: ["end-soft"]
+    - link: "2 sibling playbooks"
+      position: ["end"]
+  blog_post:
+    - link: "one playbook (anchor = outcome)"
+      position: ["end"]
+  portfolio_card:
+    - link: "related playbook or tool"
+      position: ["card-footer"]
+
+socials:
+  x: "https://x.com/chudinnorukam"
+  pinterest: "https://pinterest.com/chudinnorukam"
+  linkedin: "https://www.linkedin.com/in/chudi-nnorukam-b91203143/"
+  medium: "https://medium.com/@nnorukamchudi"
+
+contact:
+  primary:
+    label: "Email me (async)"
+    href: "mailto:nnorukamchudi@gmail.com?subject=Hire%20Chudi&body=Company%3A%0AGoal%3A%0ABudget%3A%0ATimeline%3A%0AURLs%3A"
+  secondary:
+    label: "DM me on LinkedIn (I reply async)"
+    href: "https://www.linkedin.com/in/chudi-nnorukam-b91203143/"
+
+ci:
+  actions:
+    - name: ci
+      steps: [install, lint, build]
+    - name: lighthouse (optional)
+      steps: [run, assert-budgets]

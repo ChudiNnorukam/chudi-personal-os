@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import CTAButton from '../components/CTAButton.astro';
+import services from '../../data/service.json' assert { type: 'json' };
+
+const proofCards = [
+  { metric: '+120% organic', window: '60 days', context: '' },
+  { metric: 'LCP 0.9s → 0.6s', window: '', context: '' },
+  { metric: '3× demo requests', window: '', context: '' },
+];
+---
+<BaseLayout>
+  <section class="space-y-8">
+    <h1 class="text-3xl font-bold">Chudi Nnorukam — AI MVPs &amp; SEO systems for independent creators.</h1>
+    <div class="flex space-x-4">
+      <CTAButton href="/products/ai-seo-kit" label="Buy AI SEO Kit" />
+      <CTAButton href="/services" label="Hire me (async)" />
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold mb-4">Recent Results</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {proofCards.map(card => (
+        <div class="p-4 border rounded-md bg-white shadow-sm">
+          <p class="text-lg font-bold">{card.metric}</p>
+          {card.window && <p class="text-gray-600">{card.window}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold mb-4">Featured Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {services.slice(0, 3).map(service => (
+        <div class="p-4 border rounded-md bg-white shadow-sm">
+          <h3 class="text-lg font-bold mb-2">{service.name}</h3>
+          <p class="text-sm text-gray-700 mb-2">{service.outcome}</p>
+          <CTAButton href="/services" label="Learn more" />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold mb-4">Featured Playbooks/Articles</h2>
+    <p class="text-gray-600">TODO: Add featured playbooks or articles (3–6) once content is available.</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold mb-4">About</h2>
+    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+      <div class="w-32 h-32 bg-gray-200 rounded-full"></div>
+      <div>
+        <p class="text-gray-700">TODO: Add a short bio about Chudi and a photo here.</p>
+        <CTAButton href="/about" label="Learn more" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
