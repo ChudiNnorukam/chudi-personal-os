@@ -6,7 +6,7 @@ import image from '@astrojs/image';
 
 // TODO: replace site URL once deployed
 export default defineConfig({
-  site: 'https://TODO-your-site-url.com',
+  site: 'https://ChudiNnorukam.github.io/chudi-personal-os',
   integrations: [
     tailwind({
       config: {
