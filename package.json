@@ -9,7 +9,7 @@
     "lint": "echo 'Add a linter if desired'"
   },
   "dependencies": {
-    "astro": "^4.0.0",
+    "astro": "^5.14.4",
     "@astrojs/react": "^3.0.0",
     "@astrojs/mdx": "^3.0.0",
     "@astrojs/tailwind": "^3.0.0",
